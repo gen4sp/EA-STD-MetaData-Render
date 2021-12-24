@@ -1,3 +1,6 @@
+const storage = require('nft.storage')
+const { File } = storage
+
 module.exports = function (data, img) {
   const text = JSON.stringify(data)
   return {

@@ -1,5 +1,6 @@
 const storage = require('nft.storage')
 const ipfsReader = require('./ipfsReader')
+const localFileReader = require('./localFileReader')
 // const base64 = require('./base64')
 const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDgxNzFCODcxNzYyMUQ3YjZmMEQyNmYxNjE1OTBBMWFlNTFFYmIyMDciLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY0MDM1NTcxNDg1OCwibmFtZSI6IlNURF9kZXYifQ.EP0D9PO4tzRUp-opk-Xqb8jz7_pgAt4As4oC-FFXzEQ'
 const { NFTStorage } = storage
@@ -13,9 +14,9 @@ const metaRenders = {
 }
 
 const stickers = {
-  poop: require('./renders/stickers/poop.b64'),
-  lit: require('./renders/stickers/lit.b64'),
-  musc: require('./renders/stickers/musc.b64')
+  poop: localFileReader('./renders/stickers/poop.b64'),
+  lit: localFileReader('./renders/stickers/lit.b64'),
+  musc: localFileReader('./renders/stickers/musc.b64')
 }
 
 // const pinata = pinataSDK('bb180bc5011d2f2824b3', '55e4206eb6f353edb61a323c92408c5e1e3f8a6e7d6512ac148d1b8188aef4a0')
@@ -41,7 +42,8 @@ const stickers = {
 function getSticker (sticker) {
   if (!sticker || !sticker.c) return null
   if (stickers[sticker.c]) {
-    return stickers[sticker.c]
+    sticker.src = stickers[sticker.c]
+    return sticker
   }
   return ipfsReader(sticker.c)
     .then((data) => {
@@ -63,6 +65,7 @@ function getSkin (sidOrCid) {
     })
 }
 function getMetaRender (sidOrCid) {
+  if (!sidOrCid) return metaRenders.default
   if (metaRenders[sidOrCid]) {
     return skins[sidOrCid]
   }
@@ -105,11 +108,15 @@ function main (data, metaRenderId, skinIdOrCid, stickers = []) {
       for (let i = 0; i < stickersB64.length; i++) {
         if (stickersB64[i]) safeStickers.push(stickersB64[i])
       }
-      return generateMeta(data, metaRenderId, skinIdOrCid, stickersB64)
+      console.log('SSS', safeStickers)
+      return generateMeta(data, metaRenderId, skinIdOrCid, safeStickers)
     })
 }
 main({ day: 4000000 }, null, null, [
   { c: 'lit', x: 0.5, y: 0.5, s: 1, r: 0 },
   { c: 'poop', x: 0.2, y: 0.2, s: 2, r: 45 }
-])
+]).then((m) => {
+  console.log(m)
+})
+
 // module.exports = generateMeta
