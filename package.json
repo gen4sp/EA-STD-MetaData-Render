@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@chainlink/external-adapter": "^0.2.3",
-    "@pinata/sdk": "^1.1.23"
+    "@pinata/sdk": "^1.1.23",
+    "axios": "^0.24.0",
+    "nft.storage": "^5.2.0"
   },
   "devDependencies": {
     "body-parser": "^1.19.0",

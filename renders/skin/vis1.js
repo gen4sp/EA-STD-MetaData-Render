@@ -37,7 +37,7 @@ function render (stickers) {
     return arc({ r: 100 + i * 16, angle: ang, length: 0.3 + i / 20 })
   })
   const images = stickers.map((s) => {
-    const url = `https://gateway.pinata.cloud/ipfs/${s.c}`
+    const url = s.src
     const x = s.x * 512
     const y = s.y * 512
 

@@ -1,0 +1,46 @@
+<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="my-svg-component"  width="512px" height="512px" viewBox="0 0 512 512" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+            <defs>
+            <linearGradient id="lgrad"   x1="53%" y1="100%" x2="47%" y2="0%" >
+                
+                    <stop offset="0%" style="stop-color:rgb(238,130,238);stop-opacity:1.00" />
+                    <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1.00" />
+            
+                </linearGradient>
+            </defs> 
+            <rect width="512" height="512" style="stroke:none;"  fill="url(#lgrad)"/>
+            <g id="Artboard" stroke="none" stroke-width="1" >
+                <g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="100" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="100" stroke-dasharray="31.415926535897935 596.9026041820607" stroke-dashoffset="460.766922526503"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="116" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="116" stroke-dasharray="42.516220578581866 686.3332750542502" stroke-dashoffset="391.7566039026472"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="132" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="132" stroke-dasharray="55.292030703180366 774.0884298445251" stroke-dashoffset="248.81413816431163"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="148" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="148" stroke-dasharray="69.7433569096934 860.1680685528854" stroke-dashoffset="954.4507547456191"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="164" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="164" stroke-dasharray="85.870199198121 944.5721911793311" stroke-dashoffset="1144.93598930828"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="180" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="180" stroke-dasharray="103.67255756846318 1027.3007977238624" stroke-dashoffset="1311.6149328737388"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="196" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="196" stroke-dasharray="123.15043202071989 1108.353888186479" stroke-dashoffset="1163.0874135290212"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="212" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="212" stroke-dasharray="144.30382255489116 1187.731462567181" stroke-dashoffset="1182.1813155458392"></circle>
+    </g>,<g>
+        <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="228" ></circle>
+        <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="228" stroke-dasharray="167.13272917097697 1265.4335208659686" stroke-dashoffset="1110.2388437786326"></circle>
+    </g>
+            </g>
+            
+            <g>
+                <image  transform="translate(128 128) rotate(45 80 80)  scale(1 1)" href="https://gateway.pinata.cloud/ipfs/Qmct2Zp68VPtvuekDp1uG6dinRi9vCUDT5V5cHzb264aZt" height="160" width="160" />
+            </g>
+            </svg>
+        

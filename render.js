@@ -1,7 +1,4 @@
 const vis = require('./renders/skin/vis1')
-// get skin
-// get stikers
-
 // sticker = {
 //     p:'', // path
 //     x: 0..1,

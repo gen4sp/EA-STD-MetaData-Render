@@ -8,6 +8,12 @@ function saveText (filename, text) {
   readableStream.path = `${filename}.txt`
   return _saveToIpfs(readableStream)
 }
+function saveJson (filename, text) {
+  const readableStream = Readable.from([text])// new Readable()
+  readableStream.path = `${filename}.txt`
+  return pinata.pinJSONToIPFS()
+}
+
 function saveSVG (filename, svg) {
   const readableStream = Readable.from([svg])// new Readable()
   readableStream.path = `${filename}.svg`
@@ -21,7 +27,9 @@ function saveBase64SVG (filename, dataURL) {
   return _saveToIpfs(readableStream)
 }
 function _saveToIpfs (readableStream) {
-  return pinata.pinFileToIPFS(readableStream)
+  return pinata.pinFileToIPFS(readableStream, {
+    wrapWithDirectory
+  })
     .then((res) => {
       console.log(res)
     })
@@ -32,5 +40,6 @@ function _saveToIpfs (readableStream) {
 module.exports = {
   saveText,
   saveSVG,
-  saveBase64SVG
+  saveBase64SVG,
+  saveJson
 }
