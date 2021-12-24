@@ -23,26 +23,29 @@ function arc ({ r, angle, length }) {
   ].join(' ')
 
   const so = (shift + angle / 360) * circumference + strokeDasharraySmall / 2
-  console.log('x ', { r, angle, length }, da, so)
   return `<g>
         <circle stroke="#ffffff22" fill="none" stroke-width="8px" cx="256" cy="256" r="${r}" ></circle>
         <circle stroke="#ffffff55" fill="none" stroke-width="12px" cx="256" cy="256" r="${r}" stroke-dasharray="${da}" stroke-dashoffset="${so}"></circle>
     </g>`
 }
 
-function render (stickers) {
+function render (data, stickers) {
+  const day = data.day
+  console.log('day', day)
+
   const arcs = planets.map((p, i) => {
     const ang = (360 - p.a) % 360
 
     return arc({ r: 100 + i * 16, angle: ang, length: 0.3 + i / 20 })
   })
+
   const images = stickers.map((s) => {
     const url = s.src
     const x = s.x * 512
     const y = s.y * 512
-
     return `<image  transform="translate(${x} ${y}) rotate(${s.r} ${stickerHelfSize} ${stickerHelfSize})  scale(${s.s} ${s.s})" href="${url}" height="${stickerSize}" width="${stickerSize}" />`
   })
+
   return `<svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="my-svg-component"  width="512px" height="512px" viewBox="0 0 512 512" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
             <defs>
             <linearGradient id="lgrad"   x1="53%" y1="100%" x2="47%" y2="0%" >
