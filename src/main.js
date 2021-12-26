@@ -112,11 +112,11 @@ function main (data, metaRenderId, skinIdOrCid, stickers = []) {
       return generateMeta(data, metaRenderId, skinIdOrCid, safeStickers)
     })
 }
-main({ day: 4000000 }, null, null, [
-  { c: 'lit', x: 0.5, y: 0.5, s: 1, r: 0 },
-  { c: 'poop', x: 0.2, y: 0.2, s: 2, r: 45 }
-]).then((m) => {
-  console.log(m)
-})
+// main({ day: 4000000 }, null, null, [
+//   { c: 'lit', x: 0.5, y: 0.5, s: 1, r: 0 },
+//   { c: 'poop', x: 0.2, y: 0.2, s: 2, r: 45 }
+// ]).then((m) => {
+//   console.log(m)
+// })
 
-// module.exports = generateMeta
+module.exports = main
