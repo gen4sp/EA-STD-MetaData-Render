@@ -1,0 +1,12 @@
+name: STD-MTR
+description: Test.
+
+node_identifier: MAL
+
+platforms:
+  - Docker
+  - AWS Lambda
+  - GCP Functions
+
+parameters:
+  - seed
